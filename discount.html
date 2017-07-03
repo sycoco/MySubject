@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="less/base.css"/>
+    <link rel="stylesheet" href="less/discount.css"/>
+</head>
+
+<body>
+<div id="ctl00_headerApp" class="head">
+    <div class="back">
+        <a href="index.html" class="icon-back"></a>
+    </div>
+    <h1>
+        国内折扣
+    </h1>
+    <div class="home">
+        <a href="javascript:;" class="icon-app"></a>
+    </div>
+</div>
+<main id="recommen-product" class="discount-product">
+
+</main>
+<footer class="myfooter">
+    <div class="footer_top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;" class="footer_top_btn">注册</a>
+        <a href="#" style="width: 40%; border: 0;">
+            <img src="images/top.jpg" alt="" width="15" height="15">返回顶部
+        </a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="javascript:;" style="color:red" >手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+<script id="discount-product" type="text/html">
+    {{each result as value }}
+    <div class="container">
+        <div class="cu-content">
+            <h3 class="title">
+                {{value.productName}}</h3>
+            <h4> {{value.productPrice}}</h4>
+            <div class="info">
+                <span class="mall">{{value.productFrom}}</span> <span class="addtime" style="margin-right: 4px;">10-22 13:28</span>
+                <span class="author">{{value.productTips}}</span>
+            </div>
+            <div class="content clearfix">
+                <div class="conn">
+                    <!--内容开始-->
+                    <p>{{value.productInfo}}</p>
+                    <p>{{#value.productImg}}</p>
+                    <!--内容结束-->
+                </div>
+            </div>
+            <div class="golink">
+                <a href="javascript:;" target="_blank"><i class="icon-gobuy"></i>前往购买</a>
+            </div>
+        </div>
+        <div style="text-align: center; margin: 20px 10px;">
+            <img src="images/mmbweixin2.png" style="width: 100%; height: auto;">
+        </div>
+
+    </div>
+    {{/each}}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common/Tools.js"></script>
+<script src="js/common/Route.js"></script>
+<script src="js/discount.js"></script>
+</body>
+</html>
